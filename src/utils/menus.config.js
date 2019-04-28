@@ -1,4 +1,4 @@
-const menuList = [
+export default [
   {
     title: 'Dashboard',
     key: '/dashboard',
@@ -168,4 +168,3 @@ const menuList = [
     ],
   },
 ];
-export default menuList;
