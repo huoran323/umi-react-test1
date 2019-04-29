@@ -1,9 +1,11 @@
 import { connect } from 'dva';
-import { Login } from '@components/Login';
-import { message, Row, Col } from 'antd';
+import Login from '@components/Login';
+import { message, Row, Col, Form } from 'antd';
 import logo from '../../assets/logo_blue_1024.png';
 
 import styles from './index.less';
+
+const FormItem = Form.Item;
 
 const LoginIndex = ({ dispatch, loading }) => {
   return (
@@ -14,8 +16,9 @@ const LoginIndex = ({ dispatch, loading }) => {
         </Col>
       </Row>
       <h2 className={styles.title}>通用管理系统</h2>
+      <Login />
     </div>
   );
 };
 
-export default LoginIndex;
+export default connect()(LoginIndex);
