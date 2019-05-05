@@ -33,4 +33,11 @@ export default {
     '@models': resolve(__dirname, './src/models'),
     // routes: resolve(__dirname, './src/routes'),
   },
+  proxy: {
+    '/api': {
+      target: '',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' },
+    },
+  },
 };
