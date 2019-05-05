@@ -16,7 +16,6 @@ export default class Platform extends Component {
   };
 
   onCollapse = collapsed => {
-    console.log(collapsed);
     this.setState({ collapsed });
   };
 

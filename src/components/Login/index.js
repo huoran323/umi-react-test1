@@ -12,7 +12,7 @@ class Login extends Component {
     const { form, onSubmit } = this.props;
     form.validateFields({ force: true }, (errors, values) => {
       //将点击事件中的参数传递回去，回去做点击操作
-      console.log(values);
+
       onSubmit(errors, values);
     });
   };
