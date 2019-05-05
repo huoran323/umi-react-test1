@@ -10,7 +10,7 @@ export default class BasicIndex extends Component {
     const { children } = this.props;
     return (
       <Layout className={styles.container}>
-        <Content className={styleMedia.content}>{children}</Content>
+        <Content className={styles.content}>{children}</Content>
         <Footer />
       </Layout>
     );
