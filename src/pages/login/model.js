@@ -16,7 +16,7 @@ export default {
       const { status } = yield call(api.login, { password: encrypt(password), ...rest });
       if (status === 0) {
         sessionStorage.setItem('isLogin', true);
-        yield put(routerRedux.push('/user'));
+        yield put(routerRedux.push('/sys'));
       }
     },
   },

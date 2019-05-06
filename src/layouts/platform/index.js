@@ -2,6 +2,7 @@ import styles from './index.css';
 import { Layout, Breadcrumb } from 'antd';
 import React, { Component } from 'react';
 
+import HeaderContent from './Header';
 // import MenuConfig from './../config/menuConfig';
 import MenuConfig from '@utils/menus.config';
 import MenuComponent from './menu';
@@ -31,7 +32,11 @@ export default class Platform extends Component {
           <MenuComponent menu={MenuConfig} />
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }}>{/* <HeaderComponent /> */}</Header>
+          <Header style={{ background: '#fff', padding: 0, display: 'flex' }}>
+            <div style={{ display: 'flex', flex: 'auto', justifyContent: 'flex-end' }}>
+              <HeaderContent />
+            </div>
+          </Header>
           <Content style={{ margin: '0 16px' }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
               <Breadcrumb.Item>User</Breadcrumb.Item>

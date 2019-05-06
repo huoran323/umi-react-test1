@@ -4,4 +4,8 @@ module.exports = {
     pathname: '/login',
     state: {},
   },
+  sysDefaultPage: {
+    pathname: '/sys/github',
+    state: {},
+  },
 };

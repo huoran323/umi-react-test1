@@ -1,23 +1,9 @@
 export default [
   {
-    title: 'Dashboard',
-    key: '/dashboard',
+    title: 'github',
+    key: '/sys/github',
     type: 'dashboard',
     level: 1,
-    children: [
-      {
-        title: '分析页',
-        key: '/dashboard/analysis',
-      },
-      {
-        title: '监控页',
-        key: '/dashboard/monitor',
-      },
-      {
-        title: '工作台',
-        key: '/dashboard/work',
-      },
-    ],
   },
   {
     title: '表单页',
