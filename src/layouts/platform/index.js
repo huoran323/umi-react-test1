@@ -1,6 +1,8 @@
 import styles from './index.css';
 import { Layout, Breadcrumb } from 'antd';
 import React, { Component } from 'react';
+import { connect } from 'dva';
+import PropTypes from 'prop-types';
 
 import HeaderContent from './Header';
 // import MenuConfig from './../config/menuConfig';
@@ -11,10 +13,18 @@ const { Header, Content, Footer, Sider } = Layout;
 
 // 约定 src/layouts/index.js 为全局路由，返回一个 React 组件，通过 props.children 渲染子组件。
 
-export default class Platform extends Component {
+class Platform extends Component {
   state = {
     collapsed: false,
   };
+
+  componentDidMount() {
+    const { dispatch } = this.props;
+    //获取基本信息接口调用
+    dispatch({
+      type: 'global/getSysInfo',
+    });
+  }
 
   onCollapse = collapsed => {
     this.setState({ collapsed });
@@ -58,3 +68,16 @@ export default class Platform extends Component {
     );
   }
 }
+
+function mapStateToProps({ global }) {
+  return {
+    ...global,
+  };
+}
+
+export default connect(mapStateToProps)(Platform);
+
+// Platform.propTypes = {
+//   //用户信息
+//   userInfo: PropTypes.object,
+// };

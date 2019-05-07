@@ -1,6 +1,34 @@
-// @import '~antd/lib/style/themes/default.less';
+@import '~antd/lib/style/themes/default.less';
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
+// @text-color:
 
 .rightCenter {
   text-align: right;
   height: 100%;
+}
+
+.action {
+  display: inline-block;
+  height: 100%;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  > i {
+    //text-color是antd框架中的
+    color: @text-color;
+    vertical-align: middle;
+  }
+  &:hover {
+    background: @pro-header-hover-bg;
+  }
+  &:global(.opened) {
+    background: @pro-header-hover-bg;
+  }
+}
+
+.search {
+  padding: 0 12px;
+  &:hover {
+    background: transparent;
+  }
 }
