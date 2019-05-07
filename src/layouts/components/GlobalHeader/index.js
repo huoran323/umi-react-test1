@@ -3,6 +3,7 @@ import User from '../GlobalUserCenter';
 import Notice from '../Notice';
 
 import styles from './index.less';
+import classNames from 'classnames';
 
 function Header(props) {
   return (
